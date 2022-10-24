@@ -1,6 +1,6 @@
 <html>
     <head></head>
     <body>
-        <h1> App Restaurante </h1>
+        <h1> App Escola </h1>
     </body>
 </html>
