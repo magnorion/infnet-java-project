@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class CursoTest {
-    public static ArrayList<Curso> createMateria() {
+    public static ArrayList<Curso> createCurso() {
         ArrayList<Professor> professores = ProfessorTest.createProfessor();
         Curso matematica = new Curso("Matematica", 10, "Materia de matematica", professores.get(0));
         Curso portugues = new Curso("Portugues", 10, "Materia de portugues", professores.get(1));
@@ -17,7 +17,7 @@ public class CursoTest {
     }
 
     public static void main(String[] args) {
-        ArrayList<Curso> cursos = createMateria();
+        ArrayList<Curso> cursos = createCurso();
 
         for (Curso curso : cursos) {
             System.out.println(curso.toString());

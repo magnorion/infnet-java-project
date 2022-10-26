@@ -18,7 +18,7 @@ public class AlunoController {
     ArrayList<Aluno> alunos =AlunoTest.createAlunos();
 
     model.addAttribute("title", "Lista de Alunos");
-    model.addAttribute("alunos", alunos);
+    model.addAttribute("items", alunos);
 
     return "lista";
   }

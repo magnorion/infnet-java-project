@@ -7,10 +7,12 @@ import com.magnorion.school.models.domain.Monitor;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class DisciplinaTest {
-    public static void main(String[] args) {
-        ArrayList<Curso> cursos = CursoTest.createMateria();
+
+    public static ArrayList<Disciplina> createDisciplina() {
+        ArrayList<Curso> cursos = CursoTest.createCurso();
         ArrayList<Aluno> alunos = AlunoTest.createAlunos();
         ArrayList<Monitor> monitores = MonitorTest.createMonitor();
 
@@ -42,8 +44,14 @@ public class DisciplinaTest {
         disciplinaB.addEstudante(alunos.get(0));
         disciplinaC.addEstudante(alunos.get(0));
 
-        System.out.println(disciplinaA.toString());
-        System.out.println(disciplinaB.toString());
-        System.out.println(disciplinaC.toString());
+        return new ArrayList<>(Arrays.asList(disciplinaA, disciplinaB, disciplinaC));
+    }
+
+    public static void main(String[] args) {
+        ArrayList<Disciplina> disciplinas = createDisciplina();
+
+        for (Disciplina disciplina : disciplinas) {
+            System.out.println(disciplina.toString());
+        }
     }
 }
