@@ -17,8 +17,8 @@ public class AlunoController {
   public String telaLista(ModelMap model) {
     ArrayList<Aluno> alunos =AlunoTest.createAlunos();
 
-    model.addAttribute("title", "Lista de Alunos");
-    model.addAttribute("items", alunos);
+    model.addAttribute("title", "Lista de alunos");
+    model.addAttribute("alunos", alunos);
 
     return "lista";
   }
