@@ -1,6 +1,6 @@
 package com.magnorion.school.models.domain;
 
-public class Aluno extends Pessoa {
+public class Aluno extends Participante {
     private Integer registro;
 
     public Aluno(String nome, String telefone, String email, Integer idade, Integer registro) {
@@ -8,6 +8,14 @@ public class Aluno extends Pessoa {
         this.telefone = telefone;
         this.email = email;
         this.idade = idade;
+        this.registro = registro;
+    }
+
+    public Integer getRegistro() {
+        return registro;
+    }
+
+    public void setRegistro(Integer registro) {
         this.registro = registro;
     }
 

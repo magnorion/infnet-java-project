@@ -2,7 +2,7 @@ package com.magnorion.school.models.domain;
 
 import java.time.LocalDateTime;
 
-public class Professor extends Pessoa {
+public class Professor extends Participante {
     private LocalDateTime dataContrato;
 
     public Professor(String nome, String telefone, String email, Integer idade, LocalDateTime dataContrato) {
@@ -10,6 +10,14 @@ public class Professor extends Pessoa {
         this.telefone = telefone;
         this.email = email;
         this.idade = idade;
+        this.dataContrato = dataContrato;
+    }
+
+    public LocalDateTime getDataContrato() {
+        return dataContrato;
+    }
+
+    public void setDataContrato(LocalDateTime dataContrato) {
         this.dataContrato = dataContrato;
     }
 

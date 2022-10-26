@@ -10,9 +10,9 @@ public class SchoolApplication {
 	public static void main(String[] args) {
 		AlunoTest.main(args);
 		ProfessorTest.main(args);
-		MateriaTest.main(args);
-		TurmaTest.main(args);
-		NotaTest.main(args);
+		CursoTest.main(args);
+		DisciplinaTest.main(args);
+		MonitorTest.main(args);
 
 		SpringApplication.run(SchoolApplication.class, args);
 	}
