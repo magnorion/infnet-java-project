@@ -1,4 +1,4 @@
-<%@include file="header.jsp"%>
+<%@include file="../header.jsp"%>
 
 <section class="container">
   <h1> ${title} </h1>

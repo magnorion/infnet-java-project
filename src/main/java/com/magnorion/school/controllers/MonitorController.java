@@ -19,6 +19,6 @@ public class MonitorController {
     model.addAttribute("title", "Lista de monitores");
     model.addAttribute("monitores", monitores);
 
-    return "lista";
+    return "monitores/lista";
   }
 }

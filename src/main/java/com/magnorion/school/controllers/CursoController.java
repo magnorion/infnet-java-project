@@ -19,6 +19,6 @@ public class CursoController {
     model.addAttribute("title", "Lista de cursos");
     model.addAttribute("cursos", cursos);
 
-    return "lista";
+    return "cursos/lista";
   }
 }

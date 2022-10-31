@@ -19,6 +19,6 @@ public class ProfessorController {
     model.addAttribute("title", "Lista de professores");
     model.addAttribute("professores", professores);
 
-    return "lista";
+    return "professores/lista";
   }
 }

@@ -15,11 +15,11 @@ public class AlunoController {
   
   @RequestMapping(value = "/aluno/lista", method = RequestMethod.GET)
   public String telaLista(ModelMap model) {
-    ArrayList<Aluno> alunos =AlunoTest.createAlunos();
+    ArrayList<Aluno> alunos = AlunoTest.createAlunos();
 
     model.addAttribute("title", "Lista de alunos");
     model.addAttribute("alunos", alunos);
 
-    return "lista";
+    return "alunos/lista";
   }
 }

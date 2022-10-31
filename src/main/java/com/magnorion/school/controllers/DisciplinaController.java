@@ -19,6 +19,6 @@ public class DisciplinaController {
     model.addAttribute("title", "Lista de disciplinas");
     model.addAttribute("disciplinas", disciplinas);
 
-    return "lista";
+    return "disciplinas/lista";
   }
 }
