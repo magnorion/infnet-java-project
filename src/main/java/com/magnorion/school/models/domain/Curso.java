@@ -1,6 +1,7 @@
 package com.magnorion.school.models.domain;
 
 public class Curso {
+    private int id;
     private String nome;
     private float nota;
     private String descricao;
@@ -12,6 +13,14 @@ public class Curso {
         this.nota = nota;
         this.descricao = descricao;
         this.professor = professor;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getNome() {

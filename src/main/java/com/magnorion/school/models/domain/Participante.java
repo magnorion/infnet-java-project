@@ -1,10 +1,19 @@
 package com.magnorion.school.models.domain;
 
 public class Participante {
+    protected int id;
     protected String nome;
     protected String telefone;
     protected String email;
     protected Integer idade;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getNome() {
         return nome;

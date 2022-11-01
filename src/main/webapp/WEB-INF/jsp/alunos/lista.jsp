@@ -10,6 +10,7 @@
       <th> Email </th>
       <th> Idade </th>
       <th> Registro </th>
+      <th></th>
     </thead>
     <tbody>
       <c:forEach var="aluno" items="${alunos}">
@@ -19,6 +20,7 @@
           <td> <c:out value="${aluno.email}" /> </td>
           <td> <c:out value="${aluno.idade}" /> </td>
           <td> <c:out value="${aluno.registro}" /> </td>
+          <td> <a href="/aluno/${aluno.id}/excluir">excluir</a> </td>
         </tr>
       </c:forEach>
     </tbody>

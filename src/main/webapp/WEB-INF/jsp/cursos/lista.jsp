@@ -9,6 +9,7 @@
       <th> Nota </th>
       <th> Descricao </th>
       <th> Professor </th>
+      <th></th>
     </thead>
     <tbody>
       <c:forEach var="curso" items="${cursos}">
@@ -17,6 +18,7 @@
           <td> <c:out value="${curso.nota}" /> </td>
           <td> <c:out value="${curso.descricao}" /> </td>
           <td> <c:out value="${curso.professor.nome}" /> </td>
+          <td> <a href="/curso/${curso.id}/excluir">excluir</a> </td>
         </tr>
       </c:forEach>
     </tbody>

@@ -12,6 +12,7 @@
       <th> Professor </th>
       <th> Alunos </th>
       <th> Monitor </th>
+      <th></th>
     </thead>
     <tbody>
       <c:forEach var="disciplina" items="${disciplinas}">
@@ -23,6 +24,7 @@
           <td> <c:out value="${disciplina.professor.nome}" /> </td>
           <td> <c:out value="${disciplina.alunos.size()}" /> </td>
           <td> <c:out value="${disciplina.monitor.nome}" /> </td>
+          <td> <a href="/disciplina/${disciplina.id}/excluir">excluir</a> </td>
         </tr>
       </c:forEach>
     </tbody>

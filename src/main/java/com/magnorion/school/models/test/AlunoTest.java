@@ -1,5 +1,6 @@
 package com.magnorion.school.models.test;
 
+import com.magnorion.school.controllers.AlunoController;
 import com.magnorion.school.models.domain.Aluno;
 
 import java.util.ArrayList;
@@ -17,6 +18,7 @@ public class AlunoTest {
     public static void main(String[] args) {
         ArrayList<Aluno> alunos = createAlunos();
         for (Aluno aluno : alunos) {
+            AlunoController.incluir(aluno);
             System.out.println(aluno.toString() + "\n");
         }
     }

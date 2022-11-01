@@ -1,5 +1,6 @@
 package com.magnorion.school.models.test;
 
+import com.magnorion.school.controllers.MonitorController;
 import com.magnorion.school.models.domain.Aluno;
 import com.magnorion.school.models.domain.Monitor;
 
@@ -24,6 +25,7 @@ public class MonitorTest {
         ArrayList<Monitor> monitores = createMonitor();
 
         for (Monitor monitor : monitores) {
+            MonitorController.incluir(monitor);
             System.out.println(monitor.toString());
         }
     }

@@ -10,6 +10,7 @@
       <th> Email </th>
       <th> Idade </th>
       <th> Data de Registro </th>
+      <th></th>
     </thead>
     <tbody>
       <c:forEach var="professor" items="${professores}">
@@ -19,6 +20,7 @@
           <td> <c:out value="${professor.email}" /> </td>
           <td> <c:out value="${professor.idade}" /> </td>
           <td> <c:out value="${professor.dataContrato}" /> </td>
+          <td> <a href="/professor/${professor.id}/excluir">excluir</a> </td>
         </tr>
       </c:forEach>
     </tbody>

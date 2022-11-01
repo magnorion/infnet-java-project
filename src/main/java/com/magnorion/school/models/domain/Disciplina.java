@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.stream.Collectors;
 
 public class Disciplina {
+    private int id;
     private String nome;
     private LocalDateTime data;
     private String descricao;
@@ -26,6 +27,14 @@ public class Disciplina {
 
         // inicia vazio
         this.alunos = new ArrayList<>();
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getNome() {

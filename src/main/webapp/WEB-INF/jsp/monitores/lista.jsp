@@ -10,6 +10,7 @@
       <th> Email </th>
       <th> Idade </th>
       <th> Data de Registro </th>
+      <th></th>
     </thead>
     <tbody>
       <c:forEach var="monitor" items="${monitores}">
@@ -19,6 +20,7 @@
           <td> <c:out value="${monitor.email}" /> </td>
           <td> <c:out value="${monitor.idade}" /> </td>
           <td> <c:out value="${monitor.dataMonitor}" /> </td>
+          <td> <a href="/monitor/${monitor.id}/excluir">excluir</a> </td>
         </tr>
       </c:forEach>
     </tbody>

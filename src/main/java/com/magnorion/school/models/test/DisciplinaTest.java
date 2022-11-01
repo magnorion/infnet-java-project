@@ -1,5 +1,6 @@
 package com.magnorion.school.models.test;
 
+import com.magnorion.school.controllers.DisciplinaController;
 import com.magnorion.school.models.domain.Aluno;
 import com.magnorion.school.models.domain.Curso;
 import com.magnorion.school.models.domain.Disciplina;
@@ -51,6 +52,7 @@ public class DisciplinaTest {
         ArrayList<Disciplina> disciplinas = createDisciplina();
 
         for (Disciplina disciplina : disciplinas) {
+            DisciplinaController.incluir(disciplina);
             System.out.println(disciplina.toString());
         }
     }
