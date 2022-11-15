@@ -1,8 +1,6 @@
 package com.magnorion.school.models.service;
 
-import com.magnorion.school.models.domain.Monitor;
 import com.magnorion.school.models.domain.Professor;
-import com.magnorion.school.repository.MonitorRepository;
 import com.magnorion.school.repository.ProfessorRepository;
 import org.springframework.stereotype.Service;
 

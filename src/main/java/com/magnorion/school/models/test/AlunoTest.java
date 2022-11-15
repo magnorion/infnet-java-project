@@ -1,17 +1,11 @@
 package com.magnorion.school.models.test;
 
-import com.magnorion.school.controllers.AlunoController;
 import com.magnorion.school.models.domain.Aluno;
-import com.magnorion.school.models.service.AlunoService;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 
 public class AlunoTest {
-
-    @Autowired
-    private AlunoService alunoService;
 
     public static ArrayList<Aluno> createAlunos() {
         Aluno lucas = new Aluno("Lucas Dias Lopes", "11991829366", "lucas.teste@teste.com", 29, 123123);

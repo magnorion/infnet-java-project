@@ -2,15 +2,16 @@ package com.magnorion.school.models.service;
 
 import com.magnorion.school.models.domain.Aluno;
 import com.magnorion.school.repository.AlunoRepository;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
 
 @Service
 public class AlunoService {
-    private static Map<Integer, Aluno> mapaAluno = new HashMap<>();
-    private static Integer id = 1;
 
+    @Autowired
     private AlunoRepository repository;
 
     public ArrayList<Aluno> obterLista() {

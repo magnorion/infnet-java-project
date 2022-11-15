@@ -1,8 +1,5 @@
 package com.magnorion.school.controllers;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import com.magnorion.school.models.service.AlunoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

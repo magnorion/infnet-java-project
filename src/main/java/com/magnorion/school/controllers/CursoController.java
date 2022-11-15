@@ -1,10 +1,6 @@
 package com.magnorion.school.controllers;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import com.magnorion.school.models.service.CursoService;
-import com.magnorion.school.repository.CursoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;

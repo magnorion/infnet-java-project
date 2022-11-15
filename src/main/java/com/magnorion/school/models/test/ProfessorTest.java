@@ -1,6 +1,5 @@
 package com.magnorion.school.models.test;
 
-import com.magnorion.school.controllers.ProfessorController;
 import com.magnorion.school.models.domain.Professor;
 
 import java.time.LocalDateTime;
@@ -17,11 +16,5 @@ public class ProfessorTest {
     }
 
     public static void main(String[] args) {
-        ArrayList<Professor> professores = createProfessor();
-
-        for (Professor professor : professores) {
-            ProfessorController.incluir(professor);
-            System.out.println(professor.toString() + "\n");
-        }
     }
 }

@@ -1,11 +1,17 @@
 package com.magnorion.school.models.domain;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.stream.Collectors;
 
 @Entity
@@ -16,12 +22,21 @@ public class Disciplina {
     private String nome;
     private LocalDateTime data;
     private String descricao;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "curso_id", referencedColumnName = "id")
     private Curso curso;
 
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "professor_id", referencedColumnName = "id")
     private Professor professor;
 
-    private ArrayList<Aluno> alunos;
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "disciplina_id")
+    private List<Aluno> alunos;
 
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "monitor_id", referencedColumnName = "id")
     private Monitor monitor;
 
     public Disciplina(String nome, LocalDateTime data, String descricao, Curso curso, Professor professor, Monitor monitor) {
@@ -84,7 +99,7 @@ public class Disciplina {
         this.professor = professor;
     }
 
-    public ArrayList<Aluno> getAlunos() {
+    public List<Aluno> getAlunos() {
         return alunos;
     }
 

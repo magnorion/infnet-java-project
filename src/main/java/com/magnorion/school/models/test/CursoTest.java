@@ -1,6 +1,5 @@
 package com.magnorion.school.models.test;
 
-import com.magnorion.school.controllers.CursoController;
 import com.magnorion.school.models.domain.Curso;
 import com.magnorion.school.models.domain.Professor;
 
@@ -18,11 +17,5 @@ public class CursoTest {
     }
 
     public static void main(String[] args) {
-        ArrayList<Curso> cursos = createCurso();
-
-        for (Curso curso : cursos) {
-            CursoController.incluir(curso);
-            System.out.println(curso.toString());
-        }
     }
 }

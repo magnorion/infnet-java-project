@@ -1,7 +1,5 @@
 package com.magnorion.school.models.test;
 
-import com.magnorion.school.controllers.MonitorController;
-import com.magnorion.school.models.domain.Aluno;
 import com.magnorion.school.models.domain.Monitor;
 
 import java.time.LocalDateTime;
@@ -22,11 +20,5 @@ public class MonitorTest {
 
 
     public static void main(String[] args) {
-        ArrayList<Monitor> monitores = createMonitor();
-
-        for (Monitor monitor : monitores) {
-            MonitorController.incluir(monitor);
-            System.out.println(monitor.toString());
-        }
     }
 }

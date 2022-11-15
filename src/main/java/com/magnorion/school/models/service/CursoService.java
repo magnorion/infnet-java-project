@@ -1,8 +1,6 @@
 package com.magnorion.school.models.service;
 
-import com.magnorion.school.models.domain.Aluno;
 import com.magnorion.school.models.domain.Curso;
-import com.magnorion.school.repository.AlunoRepository;
 import com.magnorion.school.repository.CursoRepository;
 import org.springframework.stereotype.Service;
 

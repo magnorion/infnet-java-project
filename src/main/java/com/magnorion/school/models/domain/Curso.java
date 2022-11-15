@@ -1,11 +1,12 @@
 package com.magnorion.school.models.domain;
 
-import net.bytebuddy.dynamic.loading.InjectionClassLoader;
-
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Curso {
@@ -16,6 +17,8 @@ public class Curso {
     private float nota;
     private String descricao;
 
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "professor_id", referencedColumnName = "id")
     private Professor professor;
 
     public Curso(String nome, float nota, String descricao, Professor professor) {

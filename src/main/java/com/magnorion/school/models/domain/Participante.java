@@ -1,11 +1,9 @@
 package com.magnorion.school.models.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
+@Inheritance(strategy = InheritanceType.JOINED)
 public class Participante {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
