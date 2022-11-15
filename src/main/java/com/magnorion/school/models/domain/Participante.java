@@ -1,7 +1,16 @@
 package com.magnorion.school.models.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Participante {
-    protected int id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    protected Integer id;
+
     protected String nome;
     protected String telefone;
     protected String email;

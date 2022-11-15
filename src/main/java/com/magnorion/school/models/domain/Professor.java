@@ -1,7 +1,9 @@
 package com.magnorion.school.models.domain;
 
+import javax.persistence.Entity;
 import java.time.LocalDateTime;
 
+@Entity
 public class Professor extends Participante {
     private LocalDateTime dataContrato;
 

@@ -3,6 +3,9 @@ package com.magnorion.school.controllers;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.magnorion.school.models.service.CursoService;
+import com.magnorion.school.models.service.MonitorService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -13,27 +16,25 @@ import com.magnorion.school.models.domain.Monitor;
 
 @Controller
 public class MonitorController {
-  private static Map<Integer, Monitor> mapaMonitor = new HashMap<>();
-  private static Integer id = 1;
 
-  public static void incluir(Monitor monitor) {
-    monitor.setId(id);
-    mapaMonitor.put(id, monitor);
+  @Autowired
+  private MonitorService service;
 
-    id++;
+  public void incluir(Monitor monitor) {
+    this.service.incluir(monitor);
   }
   
   @RequestMapping(value = "/monitor/lista", method = RequestMethod.GET)
   public String telaLista(ModelMap model) {
     model.addAttribute("title", "Lista de monitores");
-    model.addAttribute("monitores", mapaMonitor.values());
+    model.addAttribute("monitores", this.service.obterLista());
 
     return "monitores/lista";
   }
 
   @RequestMapping(value = "/monitor/{id}/excluir", method = RequestMethod.GET)
   public String exclusao(@PathVariable Integer id, ModelMap model) {
-    mapaMonitor.remove(id);
+    this.service.excluir(id);
 
     return "redirect:/monitor/lista";
   }

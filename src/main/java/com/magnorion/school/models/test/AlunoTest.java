@@ -2,11 +2,17 @@ package com.magnorion.school.models.test;
 
 import com.magnorion.school.controllers.AlunoController;
 import com.magnorion.school.models.domain.Aluno;
+import com.magnorion.school.models.service.AlunoService;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 
 public class AlunoTest {
+
+    @Autowired
+    private AlunoService alunoService;
+
     public static ArrayList<Aluno> createAlunos() {
         Aluno lucas = new Aluno("Lucas Dias Lopes", "11991829366", "lucas.teste@teste.com", 29, 123123);
         Aluno fernanda = new Aluno("Fernanda Cristina", "123123123", "fernanda@teste.com", 25, 123123);
@@ -16,10 +22,6 @@ public class AlunoTest {
     }
 
     public static void main(String[] args) {
-        ArrayList<Aluno> alunos = createAlunos();
-        for (Aluno aluno : alunos) {
-            AlunoController.incluir(aluno);
-            System.out.println(aluno.toString() + "\n");
-        }
+        System.out.println("controlller running...");
     }
 }

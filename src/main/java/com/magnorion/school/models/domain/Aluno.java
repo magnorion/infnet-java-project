@@ -1,5 +1,8 @@
 package com.magnorion.school.models.domain;
 
+import javax.persistence.Entity;
+
+@Entity
 public class Aluno extends Participante {
     private Integer registro;
 

@@ -1,7 +1,17 @@
 package com.magnorion.school.models.domain;
 
+import net.bytebuddy.dynamic.loading.InjectionClassLoader;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Curso {
-    private int id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
     private String nome;
     private float nota;
     private String descricao;
