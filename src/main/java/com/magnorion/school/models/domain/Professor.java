@@ -7,6 +7,8 @@ import java.time.LocalDateTime;
 public class Professor extends Participante {
     private LocalDateTime dataContrato;
 
+    public Professor() {}
+
     public Professor(String nome, String telefone, String email, Integer idade, LocalDateTime dataContrato) {
         this.nome = nome;
         this.telefone = telefone;

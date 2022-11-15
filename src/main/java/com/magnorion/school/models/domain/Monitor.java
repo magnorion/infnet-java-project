@@ -7,6 +7,8 @@ import java.time.LocalDateTime;
 public class Monitor extends Participante {
     private LocalDateTime dataMonitor;
 
+    public Monitor() {}
+
     public Monitor(String nome, String telefone, String email, Integer idade, LocalDateTime dataMonitor) {
         this.nome = nome;
         this.telefone = telefone;

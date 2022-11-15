@@ -12,7 +12,7 @@ import javax.persistence.OneToOne;
 public class Curso {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+    private Long id;
     private String nome;
     private float nota;
     private String descricao;
@@ -21,6 +21,8 @@ public class Curso {
     @JoinColumn(name = "professor_id", referencedColumnName = "id")
     private Professor professor;
 
+    public Curso() {}
+
     public Curso(String nome, float nota, String descricao, Professor professor) {
         this.nome = nome;
         this.nota = nota;
@@ -28,11 +30,11 @@ public class Curso {
         this.professor = professor;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

@@ -2,6 +2,7 @@
 
 <section class="container">
   <h1> ${title} </h1>
+  <p> <a class="btn btn-primary" href="/aluno/cadastro"> Cadastrar Aluno </a> </p>
 
   <table class="table">
     <thead>

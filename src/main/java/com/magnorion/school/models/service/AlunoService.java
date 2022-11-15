@@ -6,6 +6,7 @@ import com.magnorion.school.repository.AlunoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.sql.Timestamp;
 import java.util.*;
 
 @Service
@@ -18,7 +19,7 @@ public class AlunoService {
         return (ArrayList<Aluno>) this.repository.findAll();
     }
 
-    public Optional<Aluno> obterPorId(Integer id) {
+    public Optional<Aluno> obterPorId(Long id) {
         try {
             return this.repository.findById(id);
         } catch (Exception err) {
@@ -28,10 +29,12 @@ public class AlunoService {
     }
 
     public void incluir(Aluno aluno) {
+        Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+        aluno.setRegistro(timestamp.getNanos());
         this.repository.save(aluno);
     }
 
-    public void excluir(Integer id) {
+    public void excluir(Long id) {
         this.repository.deleteById(id);
     }
 }

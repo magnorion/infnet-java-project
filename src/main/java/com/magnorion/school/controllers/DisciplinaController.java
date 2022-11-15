@@ -29,7 +29,7 @@ public class DisciplinaController {
   }
 
   @RequestMapping(value = "/disciplina/{id}/excluir", method = RequestMethod.GET)
-  public String exclusao(@PathVariable Integer id, ModelMap model) {
+  public String exclusao(@PathVariable Long id, ModelMap model) {
     this.service.excluir(id);
 
     return "redirect:/disciplina/lista";

@@ -30,7 +30,7 @@ public class CursoController {
   }
 
   @RequestMapping(value = "/curso/{id}/excluir", method = RequestMethod.GET)
-  public String exclusao(@PathVariable Integer id, ModelMap model) {
+  public String exclusao(@PathVariable Long id, ModelMap model) {
     this.service.excluir(id);
 
     return "redirect:/curso/lista";

@@ -18,7 +18,7 @@ import java.util.stream.Collectors;
 public class Disciplina {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+    private Long id;
     private String nome;
     private LocalDateTime data;
     private String descricao;
@@ -39,6 +39,8 @@ public class Disciplina {
     @JoinColumn(name = "monitor_id", referencedColumnName = "id")
     private Monitor monitor;
 
+    public Disciplina() {}
+
     public Disciplina(String nome, LocalDateTime data, String descricao, Curso curso, Professor professor, Monitor monitor) {
         this.nome = nome;
         this.data = data;
@@ -51,11 +53,11 @@ public class Disciplina {
         this.alunos = new ArrayList<>();
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

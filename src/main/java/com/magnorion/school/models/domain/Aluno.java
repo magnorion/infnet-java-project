@@ -6,6 +6,8 @@ import javax.persistence.Entity;
 public class Aluno extends Participante {
     private Integer registro;
 
+    public Aluno() { }
+
     public Aluno(String nome, String telefone, String email, Integer idade, Integer registro) {
         this.nome = nome;
         this.telefone = telefone;
