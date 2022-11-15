@@ -12,7 +12,7 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-sm bg-light navbar-light">
-        <div class="container-fluid">
+        <div class="container-fluid d-flex justify-content-between">
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link active" href="/">Home</a>
@@ -32,6 +32,11 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/disciplina/lista">Disciplina</a>
                 </li>
+            </ul>
+
+            <ul class="navbar-nav">
+                <li class="nav-item"> <a href="" class="nav-link">Usuarios</a> </li>
+                <li class="nav-item"> <a href="/signup" class="nav-link">Cadastre-se</a> </li>
             </ul>
         </div>
     </nav>
