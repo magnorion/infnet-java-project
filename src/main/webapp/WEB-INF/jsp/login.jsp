@@ -6,27 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" 
             integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <title> ${title} </title>
+    <title> Login </title>
   </head>
   <body>
     <nav class="navbar navbar-expand-sm bg-light navbar-light">
         <div class="container-fluid d-flex justify-content-end">
 
             <ul class="navbar-nav">
-                <li class="nav-item"> <a href="/" class="nav-link">Login</a> </li>
+                <li class="nav-item"> <a href="/signup" class="nav-link">Cadastre-se</a> </li>
             </ul>
         </div>
     </nav>
 
 <section class="container">
-    <h1> ${title} </h1>
+    <h1> Login </h1>
 
-    <div class="mt-2 mx-auto">
-        <form action="/signup" method="POST" class="form">
-            <div class="form-group">
-                <label for=""> nome </label>
-                <input name="nome" type="text" class="form-control">
-            </div>
+    <div class="mt-2 w-25 mx-auto">
+        <form action="/login" method="POST" class="form">
 
             <div class="form-group">
                 <label for=""> email </label>
@@ -39,7 +35,7 @@
             </div>
 
             <div class="d-flex justify-content-end">
-                <button class="btn btn-primary mt-4"> Cadastrar </button>
+                <button class="btn btn-primary mt-4"> Login </button>
             </div>
         </form>
     </div>

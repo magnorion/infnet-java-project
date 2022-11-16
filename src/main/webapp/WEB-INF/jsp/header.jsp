@@ -15,7 +15,7 @@
         <div class="container-fluid d-flex justify-content-between">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active" href="/">Home</a>
+                    <a class="nav-link active" href="/home">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/aluno/lista">Aluno</a>
@@ -35,8 +35,8 @@
             </ul>
 
             <ul class="navbar-nav">
-                <li class="nav-item"> <a href="" class="nav-link">Usuarios</a> </li>
-                <li class="nav-item"> <a href="/signup" class="nav-link">Cadastre-se</a> </li>
+                <li class="nav-item"> <a href="/usuario/lista" class="nav-link">Usuarios</a> </li>
+                <li class="nav-item"> <a href="/" class="nav-link">Logout</a> </li>
             </ul>
         </div>
     </nav>
